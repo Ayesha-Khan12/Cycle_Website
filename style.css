@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Roboto';  /* The name you'll use in CSS */
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');  /* Path to the .ttf file */
+    font-weight: normal;  /* Optional: font weight (normal, bold, etc.) */
+    font-style: normal;   /* Optional: font style (normal, italic, etc.) */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +14,14 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+nav {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    padding: 30px;
 }
 
 header {
@@ -18,11 +32,9 @@ header {
 }
 
 nav ul {
-    border: 2px solid white;
     color: white;
     display: flex;
     justify-content: space-around;
-    padding-top: 30px;
 }
 
 #logo {
@@ -49,14 +61,14 @@ nav ul {
     gap: 80px;
     width: 800px;
     justify-content: center;
+    align-items: center;
     display: flex;
 }
 
 #nav-item li {
     font-family: "Roboto", sans-serif;
     list-style: none;
-    padding-top: 20px;
-
+    text-transform: uppercase;
 }
 
 #nav-item a {
@@ -75,10 +87,9 @@ nav ul {
 }
 
 #hero-section {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: space-between;
-    border: 2px solid white;
     max-width: 100%;
     height: 100vh;
     background-color: #000;
@@ -86,31 +97,34 @@ nav ul {
 }
 
 #hero-section img {
-    width: 800px;
+    width: 756.23px;
     height: 550px;
-    left: 600px;
-    margin-top: 70px;
+    position: relative;
+    top: 238px;
+    left: -152px;
+    object-fit: contain;
 }
 
 .heading h1 {
     font-family: 'Arial Black', 'Helvetica', sans-serif;
-    font-size: 5.8rem;
+    font-size: 130px;
+    line-height: 156px;
     font-weight: bold;
     color: transparent;
     -webkit-text-stroke: 1px white;
     text-transform: uppercase;
-    padding-left: 90px;
-    width: 400px;
-    height: 500px;
 }
 
 #right {
+    position: absolute;
     width: 250px;
-    height: 535px;
+    height: 335px;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    top: 138px;
+    left: 1222px;
 }
 
 .color {
@@ -177,7 +191,7 @@ nav ul {
 }
 
 .size .buttons button {
-    width: 70px;
+    width: 63px;
     font-size: .75rem;
     background: #000;
     height: 30px;
@@ -186,6 +200,9 @@ nav ul {
 }
 
 .cart {
+    position: absolute;
+    bottom: 30px;
+    right: -107px;
     width: 250px;
     height: 150px;
     display: flex;
@@ -243,14 +260,17 @@ nav ul {
     gap: 50px;
 }
 
+.wrapper {
+    display: flex;
+}
 
 .heading {
-    z-index: 9;
-    position: absolute;
+    z-index: 0;
+    position: relative;
     width: 900px;
-    border-bottom: 1px solid gray;
-    text-align: center;
-    width: 80%;
+    width: 599px;
+    top: 138px;
+    left: 108px;
 }
 
 .carousal-container {
