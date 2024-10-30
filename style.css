@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'Roboto';  /* The name you'll use in CSS */
-    src: url('fonts/Roboto-Regular.ttf') format('truetype');  /* Path to the .ttf file */
-    font-weight: normal;  /* Optional: font weight (normal, bold, etc.) */
-    font-style: normal;   /* Optional: font style (normal, italic, etc.) */
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -31,6 +31,10 @@ header {
     overflow-x: hidden;
 }
 
+.wrapper {
+    display: flex;
+}
+
 nav ul {
     color: white;
     display: flex;
@@ -44,7 +48,7 @@ nav ul {
 }
 
 #logo span {
-    font-family: "Aladin", system-ui;
+    font-family: "Aladin", system-ui !important;
     color: white;
     font-size: 3rem;
 }
@@ -91,9 +95,8 @@ nav ul {
     display: flex;
     justify-content: space-between;
     max-width: 100%;
-    height: 100vh;
+    height: 120vh;
     background-color: #000;
-    /* margin: 0 auto; */
 }
 
 #hero-section img {
@@ -113,6 +116,15 @@ nav ul {
     color: transparent;
     -webkit-text-stroke: 1px white;
     text-transform: uppercase;
+}
+
+.heading {
+    z-index: 0;
+    position: relative;
+    width: 900px;
+    width: 599px;
+    top: 138px;
+    left: 108px;
 }
 
 #right {
@@ -240,12 +252,13 @@ nav ul {
 .images {
     border: 2px solid brown;
     padding-left: 120px;
+    
 }
 
 .images img {
     padding-left: 40px;
-    width: 200px;
-    height: 180px;
+    width: 268px;
+    height: 228px;
 }
 
 
@@ -260,35 +273,35 @@ nav ul {
     gap: 50px;
 }
 
-.wrapper {
-    display: flex;
+.head {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 42px;
+    border-bottom: 1px solid gray;
+    width: 1160px;
+    margin-left: 140px;
+    text-align: center;
+    margin-top: 80px;
 }
 
-.heading {
-    z-index: 0;
-    position: relative;
-    width: 900px;
-    width: 599px;
-    top: 138px;
-    left: 108px;
-}
 
 .carousal-container {
     overflow: hidden;
-    width: 1000px;
+    width: 1061px;
+    height: 16.563rem;
     display: flex;
 }
 
 .track-carousal {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    gap: 80px;
 }
 
 .track-carousal img {
-    width: 300px;
-    height: 200px;
+    width: 264px;
+    height: 265px;
     flex: 0 0 300px;
-    padding-left: 50px;
 }
 
 .track-carousal li {
@@ -298,9 +311,10 @@ nav ul {
     align-items: center;
     gap: 20px;
 }
-.container button{
+
+.container button {
     transform: translateY(-50%);
-    width: 100px;
+    width: 46px;
     font-size: 2rem;
     font-weight: bold;
     border: none;
@@ -310,38 +324,191 @@ nav ul {
 
 /* Discrition start  */
 
-.discription {
-    margin-top: 50px;
-    width: 700px;
-    height: 400px;
-    border: 2px solid black;
-    margin-left: 100px;
+.discription-container {
+    width: 956px;
+    height: 516px;
+    margin-top: 80px;
+    margin-left: 108px;
 }
 
-.discription h1 {
+#discription-anchor,
+#specs-anchor {
     font-size: 35px;
     font-weight: 500;
+    line-height: 42px;
+    margin-bottom: 50px;
+    cursor: pointer;
 }
 
-#discription a,
-#specs a {
-    text-decoration: none;
-    color: black;
-}
-
-#discription a,
-#specs a:hover {
+#discription-anchor,
+#specs-anchor:hover {
     border-bottom: 2px solid #DD1212;
+    transform: all 1s ease-in-out;
 }
 
-#discription span,
-#specs span {
+#specs-anchor {
+    width: 100px;
+    margin-left: 40px;
+}
+
+.anchor {
+    margin-bottom: 50px;
+}
+
+.discription-container span {
+    font-size: 30px;
     font-weight: 600;
-    font-size: 1.3rem;
+    line-height: 42px;
+    width: 528px;
 }
 
-#discription p,
-#specs p {
-    font-size: 1.3rem;
-    font-weight: 100;
+.discription-container p {
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 42px;
+}
+
+.spec-content {
+    display: none;
+}
+
+
+/* Discription end */
+
+.main-container {
+    margin-top: 170px;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top {
+    width: 366px;
+    height: 63px;
+    background: #DD1212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top p {
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+}
+
+.bottom {
+    gap: 80px;
+    width: 80%;
+    height: 571px;
+    display: flex;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.left img {
+    width: 366px;
+    height: 270px;
+}
+
+.mid img {
+    width: 366px;
+    height: 571px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.right img {
+    width: 366px;
+    height: 270px;
+}
+
+/* footer start  */
+
+footer {
+    margin-top: 90px;
+    width: 100%;
+    height: 426px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.footer {
+    width: 80%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.one {
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.one p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.two {
+    width: 164px;
+    height: 200px;
+}
+.two span{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+
+}
+.two p{
+    padding-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+}
+.three {
+    width: 176px;
+}
+.three span{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.09px;
+}
+.three p{
+    padding-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+}
+.four {
+    width: 249px;
+}
+.four span{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.09px;
+}
+.four p{
+    padding-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
 }
