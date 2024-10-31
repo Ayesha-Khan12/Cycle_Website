@@ -48,15 +48,18 @@
                     <h1>THE EUPHORIA</h1>
                 </div>
                 <div class="img">
-                    <img src="Images/cycle 1.png" alt="">
+                    <img src="Images/cycle 1.png" id="image-container" alt="">
                 </div>
                 <div id="right">
                     <div class="color">
                         <h3>COLORS</h3>
-                        <div class="buttons">
-                            <button class="white"></button>
-                            <button class="yellow"></button>
-                            <button class="red"></button>
+                        <div class="buttons radios">
+                            <input type="radio" id="radio1" name="radio-group">
+                            <label for="radio1" class="radio-label label1 active" onclick="showProductByColor('Images/cycle 1.png', 0)"></label>
+                            <input type="radio" id="radio2" name="radio-group">
+                            <label for="radio2" class="radio-label label2" onclick="showProductByColor('Images/cycle 2.jpeg', 1)"></label>
+                            <input type="radio" id="radio3" name="radio-group">
+                            <label for="radio3" class="radio-label label3" onclick="showProductByColor('Images/cycle 3.jpeg', 2)"></label>
                         </div>
                     </div>
                     <div class="size">
@@ -69,17 +72,6 @@
                     </div>
                 </div>
             </div>
-            <div class="cart">
-                <div class="price">
-                    <p>PRICE</p>
-                    <p>$2500</p>
-                </div>
-                <div class="weight">
-                    <p>WEIGHT</p>
-                    <p>14.18KG</p>
-                </div>
-                <button>ADD TO CART</button>
-            </div>
         </div>
     </header>
 
@@ -91,6 +83,17 @@
             <img src="Images/cycle 1.png" alt="" style="background-color: gray;">
             <img src="Images/cycle 2.jpeg" alt="">
             <img src="Images/cycle 3.jpeg" alt="">
+        </div>
+        <div class="cart">
+            <div class="price">
+                <p>PRICE</p>
+                <p>$2500</p>
+            </div>
+            <div class="weight">
+                <p>WEIGHT</p>
+                <p>14.18KG</p>
+            </div>
+            <button>ADD TO CART</button>
         </div>
     </div>
 

@@ -21,7 +21,7 @@ nav {
     position: absolute;
     z-index: 999;
     width: 100%;
-    padding: 30px;
+    padding: 20px;
 }
 
 header {
@@ -95,8 +95,7 @@ nav ul {
     display: flex;
     justify-content: space-between;
     max-width: 100%;
-    height: 120vh;
-    background-color: #000;
+    height: 100vh;
 }
 
 #hero-section img {
@@ -213,15 +212,13 @@ nav ul {
 
 .cart {
     position: absolute;
-    bottom: 30px;
-    right: -107px;
     width: 250px;
     height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-left: -70px;
-    margin-top: 100px;
+    right: 22%;
+        bottom: 65%;
 }
 
 .price {
@@ -250,17 +247,31 @@ nav ul {
 }
 
 .images {
-    border: 2px solid brown;
-    padding-left: 120px;
-    
+margin-top: -6%;
+    position: relative;
+    display: flex;
+    left: 20%;
+}
+#img {
+    display: flex;
+    column-gap: 14px;
 }
 
-.images img {
-    padding-left: 40px;
+#img img {
+    object-fit: contain;
+}
+
+.images img:nth-child(1) {
+    width: 167px;
+}
+
+.images img:nth-child(2) {
     width: 268px;
-    height: 228px;
 }
 
+.images img:nth-child(3) {
+    width: 167px;
+}
 
 /* CUSTOMIZE START  */
 .container {
@@ -511,4 +522,51 @@ footer {
     font-size: 14px;
     font-weight: 400;
     line-height: 23px;
+}
+input[type="radio"] {
+    display: none;
+}
+
+.label1 {
+    background-color: #FFFFFF;
+}
+
+.label2 {
+    background-color: #C4C4C4;
+}
+
+.label3 {
+    background-color: #000000;
+}
+
+.radio-label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.color .buttons .active {
+    border: 2px solid #4CAF50;
+}
+
+input[type="radio"]:checked+.radio-label {
+    border: 2px solid #4CAF50;
+}
+
+.radio-label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
 }
