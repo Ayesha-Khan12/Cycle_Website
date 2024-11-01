@@ -21,7 +21,7 @@ nav {
     position: absolute;
     z-index: 999;
     width: 100%;
-    padding: 30px;
+    padding: 20px;
 }
 
 header {
@@ -94,8 +94,8 @@ nav ul {
     position: absolute;
     display: flex;
     justify-content: space-between;
-    max-width: 100%;
-    height: 952px;
+    width: 100%;
+    height: 900px;
     background-color: #000;
 }
 
@@ -170,17 +170,6 @@ nav ul {
     margin-left: 10px;
 }
 
-.yellow {
-    background: yellow;
-}
-
-.white {
-    background: white;
-}
-
-.red {
-    background: red;
-}
 
 .size {
     height: 100px;
@@ -213,15 +202,13 @@ nav ul {
 
 .cart {
     position: absolute;
-    bottom: 30px;
-    right: -107px;
     width: 250px;
     height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-left: -70px;
-    margin-top: 100px;
+    right: 12%;
+    bottom: 85%;
 }
 
 .price {
@@ -229,7 +216,7 @@ nav ul {
     display: flex;
     justify-content: space-between;
     font-weight: 400;
-    color: black;
+    color: white;
 }
 
 .weight {
@@ -250,29 +237,56 @@ nav ul {
 }
 
 .images {
-    /* border: 2px solid brown; */
     padding-left: 120px;
+    width: 100%;
     position: relative;
     margin-top: 5%;
-    
+    margin-top: -6%;
+    position: relative;
+    display: flex;
+    left: 0%;
+    margin-top: 40px;
 }
 
-.images img {
-    padding-left: 40px;
+#img {
+    display: flex;
+    column-gap: 40px;
+}
+
+#img img {
+    object-fit: contain;
+}
+
+.images img:nth-child(1) {
+    margin-top: 20px;
+    background-color: gray;
+    width: 167px;
+    height: 175px;
+}
+
+.images img:nth-child(2) {
+    background: white;
     width: 268px;
-    height: 228px;
+    height: 240px;
 }
 
+.images img:nth-child(3) {
+    background-color: gray;
+    margin-top: 20px;
+    width: 167px;
+    height: 175px;
+}
 
 /* CUSTOMIZE START  */
 .container {
-    width: 100%;
+    width: 80%;
     height: auto;
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 50px;
     justify-content: center;
     gap: 50px;
+    margin-left: 230px;
 }
 
 .head {
@@ -281,7 +295,7 @@ nav ul {
     line-height: 42px;
     border-bottom: 1px solid gray;
     width: 1160px;
-    margin-left: 140px;
+    margin-left: 200px;
     text-align: center;
     margin-top: 80px;
 }
@@ -464,7 +478,8 @@ footer {
     flex-direction: column;
     justify-content: space-between;
 }
-.one p{
+
+.one p {
     font-size: 16px;
     font-weight: 400;
     line-height: 23px;
@@ -474,43 +489,99 @@ footer {
     width: 164px;
     height: 200px;
 }
-.two span{
+
+.two span {
     font-size: 18px;
     font-weight: 700;
     line-height: 23px;
 
 }
-.two p{
+
+.two p {
     padding-top: 20px;
     font-size: 14px;
     font-weight: 400;
     line-height: 23px;
 }
+
 .three {
     width: 176px;
 }
-.three span{
+
+.three span {
     font-size: 18px;
     font-weight: 700;
     line-height: 21.09px;
 }
-.three p{
+
+.three p {
     padding-top: 20px;
     font-size: 16px;
     font-weight: 400;
     line-height: 23px;
 }
+
 .four {
     width: 249px;
 }
-.four span{
+
+.four span {
     font-size: 18px;
     font-weight: 700;
     line-height: 21.09px;
 }
-.four p{
+
+.four p {
     padding-top: 20px;
     font-size: 14px;
     font-weight: 400;
     line-height: 23px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.label1 {
+    background-color: #FFFFFF;
+}
+
+.label2 {
+    background-color: #C4C4C4;
+}
+
+.label3 {
+    background-color: #000000;
+}
+
+.radio-label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.color .buttons .active {
+    border: 2px solid #4CAF50;
+}
+
+input[type="radio"]:checked+.radio-label {
+    border: 2px solid #4CAF50;
+}
+
+.radio-label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
 }
