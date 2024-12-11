@@ -1,3 +1,5 @@
+// slider js 
+
 let track = document.querySelector('.track-carousal');
 let rightButton = document.querySelector('.right-button');
 const imageContainer = document.getElementById('image-container');
@@ -24,6 +26,7 @@ rightButton.addEventListener('click',() =>
     updateCarousal();
 });
 
+// Discription js 
 
 let disTab = document.getElementById("discription-anchor");
 let specsTab = document.getElementById("specs-anchor");
@@ -41,7 +44,7 @@ specsTab.onclick = function(){
 
 
 
-
+// images js 
 function updateHeaderImage(image) {
     // Get the src of the clicked image
     const imageSrc = image.src;
@@ -50,7 +53,14 @@ function updateHeaderImage(image) {
     document.getElementById("image-container").src = imageSrc;
 }
 
+
+// color change js 
+
 function changeHeaderColor(color) {
     document.getElementById("header").style.backgroundColor = color;
 }
 
+function toggleMenu() {
+    const navItems = document.getElementById("nav-item");
+    navItems.classList.toggle("active");
+}
